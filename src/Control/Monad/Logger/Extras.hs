@@ -1,5 +1,6 @@
+{-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-|
-Description: Composable logging actions for monad-logger.
+Description: Composable logging actions for monad-logger, with a few predefined loggers.
 |-}
 module Control.Monad.Logger.Extras where
 
@@ -17,16 +18,9 @@ runLoggerLoggingT f logger = f `runLoggingT` unLogger logger
 -- formatting of this data.
 type LogF = Loc -> LogSource -> LogLevel -> LogStr -> IO ()
 
--- | A composable logging action. Logging actions will be run one after another
--- in the order they are composed.
+-- | A composable logging action.
 newtype Logger = Logger { unLogger :: LogF }
-
-instance Semigroup Logger where
-  Logger a <> Logger b = Logger $ \loc src lvl str -> a loc src lvl str >> b loc src lvl str
-
-instance Monoid Logger where
-  mappend = (<>)
-  mempty = Logger $ \_ _ _ _ -> mempty
+  deriving (Semigroup, Monoid)
 
 -- | Composable stderr logging action.
 logToStderr :: Logger
@@ -40,7 +34,10 @@ logToStdout = Logger $ defaultOutput stdout
 logToNowhere :: Logger
 logToNowhere = mempty
 
--- | Log messages to a posix system log.
+-- | Log messages to a posix system log. The string argument is a tag that can
+-- be used to identify log messages produced by this logger.
+-- You can, for instance, run @journalctl --user -t mytag@ to see log messages
+-- tagged with @"mytag"@.
 logToSyslog :: String -> Logger
 logToSyslog tagstr = Logger $ \loc src lvl str -> do
   let syslogPriority = case lvl of
