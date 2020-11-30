@@ -1,5 +1,6 @@
 monad-logger-extras
 ===================
+[![Haskell](https://img.shields.io/badge/language-Haskell-orange.svg)](https://haskell.org) [![Hackage](https://img.shields.io/hackage/v/monad-logger-extras.svg)](https://hackage.haskell.org/package/monad-logger-extras) [![Hackage CI](https://matrix.hackage.haskell.org/api/v2/packages/monad-logger-extras/badge)](https://matrix.hackage.haskell.org/#/package/monad-logger-extras) [![Github CI](https://github.com/obsidiansystems/monad-logger-extras/workflows/github-action/badge.svg)](https://github.com/obsidiansystems/monad-logger-extras/actions) [![BSD3 License](https://img.shields.io/badge/license-BSD3-blue.svg)](https://github.com/obsidiansystems/monad-logger-extras/blob/master/LICENSE)
 
 Composable logging, syslog integration, and more with [monad-logger](https://hackage.haskell.org/package/monad-logger).
 
