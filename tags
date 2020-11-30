@@ -1,0 +1,21 @@
+(Monad m, Alternative m) => Alternative (LoggingT m)	./src/Control/Monad/Logger/Orphans.hs	13
+(Monad m, Alternative m) => MonadPlus (LoggingT m)	./src/Control/Monad/Logger/Orphans.hs	17
+Control.Monad.Logger.Extras	./src/Control/Monad/Logger/Extras.hs	6
+Control.Monad.Logger.Orphans	./src/Control/Monad/Logger/Orphans.hs	5
+LogF	./src/Control/Monad/Logger/Extras.hs	20
+Logger	./src/Control/Monad/Logger/Extras.hs	24
+Logger	./src/Control/Monad/Logger/Extras.hs	27
+Monoid Logger	./src/Control/Monad/Logger/Extras.hs	29
+Semigroup Logger	./src/Control/Monad/Logger/Extras.hs	26
+a	./src/Control/Monad/Logger/Orphans.hs	15
+empty	./src/Control/Monad/Logger/Orphans.hs	14
+logToNowhere	./src/Control/Monad/Logger/Extras.hs	42
+logToStderr	./src/Control/Monad/Logger/Extras.hs	34
+logToStdout	./src/Control/Monad/Logger/Extras.hs	38
+logToSyslog	./src/Control/Monad/Logger/Extras.hs	46
+main	./README.lhs	23
+main	./Setup.hs	2
+mappend	./src/Control/Monad/Logger/Extras.hs	30
+mempty	./src/Control/Monad/Logger/Extras.hs	31
+runLoggerLoggingT	./src/Control/Monad/Logger/Extras.hs	15
+unLogger	./src/Control/Monad/Logger/Extras.hs	24
