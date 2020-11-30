@@ -2,7 +2,7 @@ cabal-version:      >=1.10
 name:               monad-logger-extras
 version:            0.1.0.0
 synopsis:
-  Convenience types and functions for composing loggers, plus a few orphan instances.
+  Utilities for composing loggers, plus a few orphan instances.
 
 description:
   Build composable logging backends for monad-logger. This package includes a few composable backends (including a posix syslog backend).
