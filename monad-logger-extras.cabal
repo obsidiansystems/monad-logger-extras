@@ -1,11 +1,11 @@
 cabal-version:      >=1.10
 name:               monad-logger-extras
-version:            0.1.0.0
+version:            0.1.1.0
 synopsis:
-  Utilities for composing loggers, plus a few orphan instances.
+  Utilities for composing loggers, coloring output, plus a few orphan instances.
 
 description:
-  Build composable logging backends for monad-logger. This package includes a few composable backends (including a posix syslog backend).
+  Build composable logging backends for monad-logger. This package includes a few composable backends (including a posix syslog backend) and some extras like log output coloring utilities.
 
 homepage:           https://github.com/obsidiansystems/monad-logger-extras
 bug-reports:
@@ -30,7 +30,7 @@ library
     Control.Monad.Logger.Orphans
 
   build-depends:
-      ansi-terminal  >=0.11   && <0.12
+      ansi-terminal  >=0.9    && <0.12
     , base           >=4.12   && <5
     , bytestring     >=0.10   && <0.12
     , hsyslog        >=5      && <5.1
