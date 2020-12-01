@@ -12,6 +12,6 @@ import Control.Monad.Trans (lift)
 
 instance (Monad m, Alternative m) => Alternative (LoggingT m) where
   empty = lift empty
-  a <|> b = LoggingT $ \r -> let LoggingT f' = a <|> b in f' r
+  a <|> b = LoggingT $ \f -> runLoggingT a f <|> runLoggingT b f
 
 instance (Monad m, Alternative m) => MonadPlus (LoggingT m)
