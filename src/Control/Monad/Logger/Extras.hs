@@ -2,7 +2,7 @@
 {-# LANGUAGE GeneralizedNewtypeDeriving #-}
 {-|
 Description: Composable logging actions for monad-logger, with a few predefined loggers.
-|-}
+-}
 module Control.Monad.Logger.Extras where
 
 import Control.Monad.Logger

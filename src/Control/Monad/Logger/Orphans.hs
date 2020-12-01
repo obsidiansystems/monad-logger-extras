@@ -1,7 +1,7 @@
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 {-|
 Description: Orphan instances for monad-logger's LoggingT
-|-}
+-}
 module Control.Monad.Logger.Orphans where
 
 import Control.Monad.Logger
