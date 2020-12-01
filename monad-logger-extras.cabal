@@ -30,7 +30,7 @@ library
     Control.Monad.Logger.Orphans
 
   build-depends:
-      ansi-terminal  >=0.11   && <0.12
+      ansi-terminal  >=0.9    && <0.12
     , base           >=4.12   && <5
     , bytestring     >=0.10   && <0.12
     , hsyslog        >=5      && <5.1
