@@ -32,8 +32,11 @@ This example can be built and run using cabal (either `cabal repl example` or `c
 > 
 > main :: IO ()
 > main = do
->   let logger = logToStdout <> logToStderr <> logToSyslog "log-test"
+>   let logger = colorize logToStdout <> logToStderr <> logToSyslog "log-test"
 >   flip runLoggerLoggingT logger $ do
 >     logInfoN "This is a test. You should see this on stdout, stderr, and in your system log."
+>     logDebugN "This is a debug message."
+>     logWarnN "This is a warning."
+>     logErrorN "This is an error!"
 
 ```
