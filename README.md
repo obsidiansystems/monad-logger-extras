@@ -9,7 +9,9 @@ Description
 
 This package provides a way to compose logging actions so that you can conveniently log to multiple destinations. It also includes implementations of a few common logging actions: logging to stdout, stderr, nowhere (similar to `NoLoggingT`), and to a posix syslog (using [hsyslog](https://hackage.haskell.org/package/hsyslog)).
 
-It also contains a couple of orphan instances for [`LoggingT`](https://hackage.haskell.org/package/monad-logger-0.3.36/docs/Control-Monad-Logger.html#t:LoggingT): `MonadPlus` and `Alternative`.
+Logs can be emitted in color by using the `colorize` or `colorizeWith` function on your `Logger`.
+
+This package also contains a couple of orphan instances for [`LoggingT`](https://hackage.haskell.org/package/monad-logger-0.3.36/docs/Control-Monad-Logger.html#t:LoggingT): `MonadPlus` and `Alternative`.
 
 Example usage
 -------------
@@ -21,7 +23,6 @@ journalctl --user -t log-test -f
 ```
 
 This example can be built and run using cabal (either `cabal repl example` or `cabal build example`).
-
 
 ```haskell
 
@@ -40,3 +41,7 @@ This example can be built and run using cabal (either `cabal repl example` or `c
 >     logErrorN "This is an error!"
 
 ```
+
+This should produce output that looks like this (note that the stdout log has been `colorize`d):
+
+![Example output](https://i.imgur.com/nkVAHrM.png)
