@@ -34,7 +34,7 @@ library
     , base           >=4.12   && <5
     , bytestring     >=0.10   && <0.12
     , hsyslog        >=5      && <5.1
-    , monad-logger   >=0.3.36 && <0.4
+    , monad-logger   >=0.3.40 && <0.4
     , mtl            >=2.2    && <2.3
 
   hs-source-dirs:   src
