@@ -1,5 +1,9 @@
 # Revision history for monad-logger-extras
 
+## 0.1.1.2
+
+* Support GHC 9.12
+
 ## 0.1.1.1
 
 * Fix haddocks formatting
